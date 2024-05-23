@@ -35,22 +35,21 @@ npm install @semiotic-labs/graph-sql
 ## Usage
 
 ```ts
-import {parse} from '@semiotic-labs/graph-sql';
+import {createConnection} from '@semiotic-labs/graph-sql';
 
-const simple_schema = `
-    type SomeComplexTableErc20Name  @entity {
-        "Some description about a string field"
-        id: ID!,
-        nullableField:Boolean,
-        booleanField:Boolean!,
-        bigIntField:BigInt!,
-        bytesField:Bytes!,
-        bigDecimalField:BigDecimal!,
-        intField:Int!,
-        int8Field:Int8!,
-        stringField:String!
-    }
-`;
+const connection = await createConnection(
+  {
+    displayName: 'Graph EBO Arbitrum'
+  },
+  undefined,
+  true
+);
 
-const layout = parse(simple_schema);
+ const queryresult = await connection.execute('SELECT 1;');
+ 
 ```
+
+## Gateway API Key
+
+SQL query execution requires API key for sql enabled gateway. Get your API keys
+from https://sql.semiotic.ai .
