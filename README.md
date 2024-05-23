@@ -14,7 +14,7 @@ graph-sql</h1>
 </p>
 <p align="center">
   <a href="https://www.npmjs.com/package/@semiotic-labs/graph-sql">
-    <img alt="npm install" src="https://img.shields.io/badge/npm%20i-graph--tables-brightgreen">
+    <img alt="npm install" src="https://img.shields.io/badge/npm%20i-%40semiotic--labs/graph--sql-brightgreen">
   </a>
   <a href="https://github.com/semiotic-ai/graph-sql/tags">
     <img alt="version" src="https://img.shields.io/npm/v/@semiotic-labs/graph-sql?color=green&label=version">
@@ -52,4 +52,5 @@ const connection = await createConnection(
 ## Gateway API Key
 
 SQL query execution requires API key for sql enabled gateway. Get your API keys
-from https://sql.semiotic.ai .
+from https://sql.semiotic.ai. You can either pass it to `createConnect` as a parameter 
+or set as `GATEWAY_API_KEY` environment variable. 
