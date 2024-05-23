@@ -1,0 +1,8 @@
+{
+  "out": "./docs",
+  "entryPoints": ["./src"],
+  "entryPointStrategy": "expand",
+  "plugin": ["typedoc-theme-hierarchy"],
+  "theme": "hierarchy",
+  "name": "SQL enabled Subgraph Services API"
+}
